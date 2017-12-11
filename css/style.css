@@ -243,6 +243,7 @@ h3.kontaktinfo {
     display: block;
     width: 100%;
     height: auto;
+    margin: 10px auto;
 }
 
 .caseimage {
