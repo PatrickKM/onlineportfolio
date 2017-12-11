@@ -1,0 +1,406 @@
+/* GLOBAL RULES */
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+}
+
+html {
+    font-family: "Arial", "sans-serif";
+    box-sizing: border-box;
+    height: 100%;
+
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header" "section" "section" "footer";
+    grid-template-rows: 100px 185px auto 190px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 0px;
+    grid-column-gap: 10px;
+    margin: 0px;
+    min-height: 100%;
+    position: absolute;
+}
+
+header,
+footer {
+    padding: 1.2em;
+    background: #fff;
+}
+
+footer {
+    color: white;
+}
+
+footer a {
+    text-decoration: none;
+    color: skyblue;
+}
+
+#pageHeader {
+    grid-area: header;
+}
+
+#pageSection {
+    grid-area: section;
+}
+
+#pageFooter {
+    grid-area: footer;
+    background: #111111;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 170px;
+    padding: 10px;
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+#logo {
+    width: 37%;
+}
+
+/* BURGERMENU NAV START 
+(NAV taget fra Julien Lejeune's codepen https://codepen.io/jlnljn/pen/LkXoBb og bearbejdet af Patrick Koo Madsen) */
+
+.anchorfix {
+    display: block;
+    height: 100px;
+    margin-top: -100px;
+    visibility: hidden;
+}
+
+body header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 7;
+}
+
+body input + label {
+    position: fixed;
+    top: 35px;
+    right: 45px;
+    height: 20px;
+    width: 15px;
+    z-index: 5;
+}
+
+body input + label span {
+    position: absolute;
+    width: 150%;
+    height: 2px;
+    top: 50%;
+    margin-top: -1px;
+    left: 0;
+    display: block;
+    background: #020304;
+    transition: 0.5s;
+}
+
+body input + label span:first-child {
+    top: 3px;
+}
+
+body input + label span:last-child {
+    top: 16px;
+}
+
+body label:hover {
+    cursor: pointer;
+}
+
+body input:focus + label span {
+    opacity: 0;
+    top: 50%;
+}
+
+body input:focus + label span:first-child {
+    opacity: 1;
+    transform: rotate(405deg);
+}
+
+body input:focus + label span:last-child {
+    opacity: 1;
+    transform: rotate(-405deg);
+}
+
+body input ~ nav {
+    background: white;
+    position: fixed;
+    top: 0;
+    left: 0px;
+    width: 100%;
+    height: 90px;
+    z-index: 3;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    overflow: hidden;
+}
+
+body input ~ nav > ul {
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    right: 20%;
+    list-style-type: none;
+}
+
+body input ~ nav > ul > li {
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0s;
+
+}
+
+body input ~ nav > ul > li > a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #020304;
+    font-weight: 700;
+    font-family: sans-serif;
+    display: block;
+    padding: 30px;
+}
+
+body input:focus ~ nav {
+    height: 100%;
+    transition-delay: 0s;
+}
+
+body input:focus ~ nav > ul > li {
+    opacity: 1;
+    transition-delay: 0.5s;
+}
+
+/* BURGERMENU NAV END */
+
+/* Tekst på forsidens billede */
+
+h1.tekstbox {
+    margin-top: 0;
+}
+
+.tekstbox {
+    background: url(../images/forside.jpg);
+    background-size: cover;
+    text-align: center;
+    padding: 60px 15px 60px 15px;
+    height: 100px;
+}
+
+.tekstbox span {
+    background-color: black;
+    color: #fff;
+    display: inline;
+}
+
+.tekstbox span.forsidetitle {
+    font-size: 32px;
+}
+
+.tekstbox span.forsideundertitle {
+    font-size: 16px;
+}
+
+.undertitler {
+    text-align: center;
+    font-weight: 100;
+    position: relative;
+    margin: 10px 0px 10px 0px;
+}
+
+.undertitler span {
+    font-weight: 800;
+}
+
+.undertitlerp {
+    padding: 0 10px 0 10px;
+    font-size: 14px;
+    text-align: left;
+}
+
+h3.kontaktinfo {
+    margin: 0;
+    text-align: center;
+}
+
+/* Cover billeder hover effect */
+
+.cover {
+    position: relative;
+    margin: 10px auto;
+    width: 97%;
+}
+
+.imagecover {
+    display: block;
+    width: 95%;
+    height: auto;
+    margin: auto;
+}
+
+.hover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(50, 50, 50, 0.75);
+}
+
+.cover:hover .hover {
+    opacity: 1;
+}
+
+.covertext {
+    color: white;
+    font-size: 16px;
+    position: relative;
+    text-align: left;
+    top: 87%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    z-index: 6;
+}
+
+.cover a {
+    position: static;
+    width: 100%;
+    left: 0%;
+    z-index: 10;
+}
+
+.covertext span {
+    font-weight: 800;
+}
+
+/* CASES PAGES */
+
+.casetitle {
+    text-align: center;
+    font-weight: 100;
+    margin: 5px 0px 5px 0px;
+}
+
+.casetitle span {
+    font-weight: 600;
+}
+
+.casetitle a {
+    font-size: 14px;
+}
+
+.casetext {
+    font-size: 14px;
+    text-align: left;
+    padding: 0 10px 0 10px;
+}
+
+.casetitle img {
+    position: relative;
+    margin: 0px 5px 0px 5px;
+    width: 97%;
+}
+
+.refleksion {
+    text-align: center;
+    font-weight: 100;
+    margin: 5px 0px 5px 0px;
+}
+
+.refleksion span {
+    font-weight: 600;
+}
+
+.refleksion p {
+    font-size: 14px;
+    text-align: left;
+    padding: 0 10px 0 10px;
+}
+
+/* MEDIA QUERY */
+
+@media screen and (min-width: 1024px) {
+    
+    body header {
+        left: 100px
+    }
+    
+    body input + label {
+    position: fixed;
+    top: 35px;
+    right: 105px;
+    height: 20px;
+    width: 15px;
+    z-index: 5;
+}
+    
+    .tekstbox {
+        height: 250px;
+    }
+    
+    .tekstbox span.forsidetitle {
+        position: relative;
+        top: 100px;
+    }
+
+    .tekstbox span.forsideundertitle {
+        position: relative;
+        top: 100px;
+    }
+    
+    .cover .imagecover, .hover {
+        width: 33%; 
+        display: block;
+        margin: auto;
+    }
+    
+    .undertitlerp {
+        padding: 0 100px 0 100px;
+        font-size: 16px;
+        text-align: left;
+    }
+    
+    .kontaktinfo, p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .casetitle p {
+        padding: 0 100px 0 100px;
+        font-size: 16px;
+        text-align: left;
+    }
+    
+    
+    .casetitle img {
+        width: 40%;
+        float: left;
+        margin: 10px 15px;
+    }
+    
+    img[src="images/case2logomockup.jpg"] {
+        width: 20%;
+    }
+    
+    .refleksion {
+        clear:both;
+    }
+    
+    .refleksion p {
+        padding: 0 100px 0 100px;
+        font-size: 16px;
+        text-align: left;
+    }
