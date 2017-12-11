@@ -235,15 +235,14 @@ h3.kontaktinfo {
 
 .cover {
     position: relative;
-    margin: 10px auto;
     width: 97%;
 }
 
 .imagecover {
     display: block;
-    width: 95%;
+    width: 100%;
     height: auto;
-    margin: auto;
+    margin: 10px auto;
 }
 
 .hover {
@@ -324,7 +323,7 @@ h3.kontaktinfo {
     font-weight: 600;
 }
 
-.refleksion p {
+.refleksiontext {
     font-size: 14px;
     text-align: left;
     padding: 0 10px 0 10px;
@@ -361,10 +360,24 @@ h3.kontaktinfo {
         top: 100px;
     }
     
-    .cover .imagecover, .hover {
+    .cover, .imagecover .hover {
         width: 33%; 
         display: block;
         margin: auto;
+    }
+    
+    .centerimg {
+        text-align: center;
+    }
+    
+    .caseimage {
+        width: 33%;
+        display: inline-block;
+        margin: auto 10px;
+    }
+    
+    .covertext {
+        top: 80%
     }
     
     .undertitlerp {
@@ -378,7 +391,7 @@ h3.kontaktinfo {
         text-align: center;
     }
 
-    .casetitle p {
+    .casetext {
         padding: 0 100px 0 100px;
         font-size: 16px;
         text-align: left;
@@ -399,8 +412,9 @@ h3.kontaktinfo {
         clear:both;
     }
     
-    .refleksion p {
+    .refleksiontext {
         padding: 0 100px 0 100px;
         font-size: 16px;
         text-align: left;
     }
+    
