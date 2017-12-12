@@ -7,7 +7,7 @@ body {
 }
 
 html {
-    font-family: "Arial", "sans-serif";
+    font-family: 'Poppins', "Arial", "sans-serif";
     box-sizing: border-box;
     height: 100%;
 
@@ -16,7 +16,7 @@ html {
 body {
     display: grid;
     grid-template-areas: "header" "section" "section" "footer";
-    grid-template-rows: 100px 185px auto 190px;
+    grid-template-rows: 100px 185px auto 275px;
     grid-template-columns: 1fr;
     grid-row-gap: 0px;
     grid-column-gap: 10px;
@@ -54,7 +54,7 @@ footer a {
     right: 0;
     left: 0;
     bottom: 0;
-    height: 170px;
+    height: auto;
     padding: 10px;
     grid-row-start: 1;
     grid-row-end: 5;
@@ -210,7 +210,7 @@ h1.tekstbox {
 
 .undertitler {
     text-align: center;
-    font-weight: 100;
+    font-weight: 200;
     position: relative;
     margin: 10px 0px 10px 0px;
 }
@@ -293,7 +293,7 @@ h3.kontaktinfo {
 
 .casetitle {
     text-align: center;
-    font-weight: 100;
+    font-weight: 200;
     margin: 5px 0px 5px 0px;
 }
 
@@ -319,7 +319,7 @@ h3.kontaktinfo {
 
 .refleksion {
     text-align: center;
-    font-weight: 100;
+    font-weight: 200;
     margin: 5px 0px 5px 0px;
 }
 
